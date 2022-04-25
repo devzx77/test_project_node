@@ -15,7 +15,6 @@ if(name && dept && company){
     else{ res.send("Hello world!")
 }
 })
-
 app.get('/home',(req,res)=>{
      res.send("This is a Home page")
 })
@@ -27,10 +26,6 @@ app.get('/contact',(req,res)=>{
 })
 app.get('/address',(req,res)=>{
     res.send('this page is directd to adress of the company')
-})
-app.get('/',(req,res)=>{
-    var name=req.query.name
-    res.send('Hello '+ name +'!')
 })
 app.use((req,res,next)=>{
     res.status(404).send('Error 404 page not found!')
